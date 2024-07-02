@@ -1,0 +1,14 @@
+Node2D
+RayCast2D
+AnimationPlayer
+CollisionShape2D
+Area2D
+Sprite2D
+CharacterBody2D
+Timer
+WorldEnvironment
+PointLight2D
+Camera2D
+TileMap
+CanvasModulate
+TextureRect

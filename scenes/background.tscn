@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dod5oufapi8df"]
+
+[ext_resource type="Texture2D" uid="uid://cwvx0akqehq3v" path="res://assets/tile/parallax_background/layer_4.png" id="1_2r0sl"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="1_4kuyy"]
+[ext_resource type="Texture2D" uid="uid://dfkm8xunbmnt5" path="res://assets/tile/parallax_background/layer_1.png" id="2_w4emm"]
+[ext_resource type="Texture2D" uid="uid://canswgt3gyybc" path="res://assets/tile/parallax_background/layer_2.png" id="3_73m4m"]
+[ext_resource type="Texture2D" uid="uid://bde7k2oq3b7oc" path="res://assets/tile/parallax_background/layer_3.png" id="4_q1wb4"]
+[ext_resource type="PackedScene" uid="uid://bxdpoqa4pejya" path="res://scenes/mask.tscn" id="6_3driy"]
+
+[node name="Background" type="ParallaxBackground"]
+script = ExtResource("1_4kuyy")
+layer_speed = Array[int]([20, 15, 10, 5])
+
+[node name="Layer4" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(640, 360)
+
+[node name="TextureRect" type="TextureRect" parent="Layer4"]
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("1_2r0sl")
+
+[node name="Layer1" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(640, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Layer1"]
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("2_w4emm")
+
+[node name="Layer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(640, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Layer2"]
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("3_73m4m")
+
+[node name="Layer3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(640, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Layer3"]
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("4_q1wb4")
+
+[node name="Mask" parent="." instance=ExtResource("6_3driy")]
